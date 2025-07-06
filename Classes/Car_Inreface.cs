@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    public class Class1
+    interface Car_Inreface
     {
+        void addObject(List<Car> cars, Car car);
+        void removeObject(List<Car> cars, Car car);
+
+
     }
 }

@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "..\WindowsF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{5095E0A5-F154-42CE-A224-0E771D5FF496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "..\API\API.csproj", "{D671DDEA-A111-40B1-A013-46DD261BF573}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "..\API\API.csproj", "{D671DDEA-A111-40B1-A013-46DD261BF573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{279398DA-4AFD-4D72-A218-ACE662C13145}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
