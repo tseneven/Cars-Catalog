@@ -16,5 +16,10 @@ namespace WindowsForms
         {
             InitializeComponent();
         }
+
+        private void Auth_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

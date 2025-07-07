@@ -1,0 +1,17 @@
+## Временные файлы
+*.log
+*.tmp
+
+## Сборка .NET
+bin/
+obj/
+*.dll
+*.exe
+*.app
+*.pdb
+
+## Пользовательские настройки Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo

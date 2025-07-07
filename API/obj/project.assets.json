@@ -793,6 +793,15 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Classes/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Classes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Classes.dll": {}
+        }
       }
     }
   },
@@ -2234,10 +2243,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Classes/1.0.0": {
+      "type": "project",
+      "path": "../Classes/Classes.csproj",
+      "msbuildProject": "../Classes/Classes.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Classes >= 1.0.0",
       "Microsoft.Data.SqlClient >= 6.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.Data.SqlClient >= 4.9.0"
@@ -2275,7 +2290,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Neven\\Documents\\Cars-Catalog\\Classes\\Classes.csproj": {
+              "projectPath": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\Classes\\Classes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
