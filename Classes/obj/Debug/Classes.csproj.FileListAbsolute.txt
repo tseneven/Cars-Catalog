@@ -1,6 +1,0 @@
-C:\Users\Neven\Documents\Cars-Catalog\Classes\bin\Debug\Classes.dll
-C:\Users\Neven\Documents\Cars-Catalog\Classes\bin\Debug\Classes.pdb
-C:\Users\Neven\Documents\Cars-Catalog\Classes\obj\Debug\Classes.csproj.AssemblyReference.cache
-C:\Users\Neven\Documents\Cars-Catalog\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
-C:\Users\Neven\Documents\Cars-Catalog\Classes\obj\Debug\Classes.dll
-C:\Users\Neven\Documents\Cars-Catalog\Classes\obj\Debug\Classes.pdb

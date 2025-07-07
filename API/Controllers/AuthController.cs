@@ -1,4 +1,4 @@
-﻿using API.Models;
+﻿using Classes;
 using API.Reposirotys;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,9 +28,9 @@ namespace API.Controllers
 
             return result switch
             {
-                "200" => Ok(auth_model),
-                "400" => StatusCode(400, "Пользователь уже существует"),
-                _ => StatusCode(500, "Ошибка на сервере")    
+                "200" => Ok("200"),
+                "400" => StatusCode(400, "400"),
+                _ => StatusCode(500, "500")    
             };
             
         }
