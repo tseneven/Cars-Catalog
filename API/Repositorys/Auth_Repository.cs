@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-using API.Models;
+using Classes;
 
 namespace API.Reposirotys
 {

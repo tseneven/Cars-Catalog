@@ -1,4 +1,4 @@
-﻿using API.Models;
+﻿using Classes;
 
 namespace API.Reposirotys
 {

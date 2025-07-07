@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsForms.Models;
+using Classes;
 
 namespace WindowsForms.Repositorys
 {
