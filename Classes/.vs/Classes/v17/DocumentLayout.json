@@ -1,16 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\Classes\\",
+  "WorkspaceRootPath": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\Classes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5095E0A5-F154-42CE-A224-0E771D5FF496}|..\\Tests\\Tests.csproj|c:\\users\\neven\\desktop\\pet-project (car catalog)\\tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\reposirotys\\auth_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8847730F-D062-4E58-B275-BB79E5C93DC1}|..\\WindowsForms\\WindowsForms.csproj|c:\\users\\neven\\desktop\\pet-project (car catalog)\\windowsforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16012903-B871-4C25-8176-1E07F0BDFA15}|Classes.csproj|c:\\users\\neven\\desktop\\pet-project (car catalog)\\classes\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16012903-B871-4C25-8176-1E07F0BDFA15}|Classes.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\reposirotys\\iauth_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\models\\auth_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D671DDEA-A111-40B1-A013-46DD261BF573}|..\\API\\API.csproj|c:\\users\\neven\\documents\\cars-catalog\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,48 +28,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\Tests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\Tests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\Tests\\UnitTest1.cs",
-              "RelativeToolTip": "..\\Tests\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T17:45:56.945Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:365008427:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\WindowsForms\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\WindowsForms\\Form1.cs",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\WindowsForms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "..\\WindowsForms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwCAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T17:45:40.115Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-07-07T12:01:14.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Auth_Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Reposirotys\\Auth_Repository.cs",
+              "RelativeDocumentMoniker": "..\\API\\Reposirotys\\Auth_Repository.cs",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Reposirotys\\Auth_Repository.cs",
+              "RelativeToolTip": "..\\API\\Reposirotys\\Auth_Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T11:35:27.267Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\Classes\\Class1.cs",
-              "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Pet-Project (Car Catalog)\\Classes\\Class1.cs",
-              "RelativeToolTip": "Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IAuth_Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Reposirotys\\IAuth_Repository.cs",
+              "RelativeDocumentMoniker": "..\\API\\Reposirotys\\IAuth_Repository.cs",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Reposirotys\\IAuth_Repository.cs",
+              "RelativeToolTip": "..\\API\\Reposirotys\\IAuth_Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T17:45:23.648Z",
+              "WhenOpened": "2025-07-07T11:32:44.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Auth_Model.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Models\\Auth_Model.cs",
+              "RelativeDocumentMoniker": "..\\API\\Models\\Auth_Model.cs",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Models\\Auth_Model.cs",
+              "RelativeToolTip": "..\\API\\Models\\Auth_Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T11:30:36.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Program.cs",
+              "RelativeDocumentMoniker": "..\\API\\Program.cs",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\Program.cs",
+              "RelativeToolTip": "..\\API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T20:11:31.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Neven\\Documents\\Cars-Catalog\\API\\appsettings.json",
+              "RelativeToolTip": "..\\API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-06T19:26:50.725Z",
               "EditorCaption": ""
             }
           ]

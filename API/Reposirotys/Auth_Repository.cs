@@ -32,7 +32,7 @@ namespace API.Reposirotys
                 string insertQuery = "INSERT INTO dbo.Users (Логин, Пароль) VALUES (@login, @password)";
                 using var insertCmd = new SqlCommand(insertQuery, conn);
                 insertCmd.Parameters.AddWithValue("@login", auth_model.Login);
-                insertCmd.Parameters.AddWithValue("@password", auth_model.Password); // лучше бы хэшировать!
+                insertCmd.Parameters.AddWithValue("@password", auth_model.Password); 
 
                 int rows = await insertCmd.ExecuteNonQueryAsync();
 
