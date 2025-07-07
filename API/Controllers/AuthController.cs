@@ -24,7 +24,7 @@ namespace API.Controllers
         public async Task<ActionResult> Register([FromBody] Auth_Model auth_model)
         {
             var result = await _authRepository.Register(auth_model);
-            _logger.LogInformation($"Post запрос /api/Auth/register \n{auth_model.Login} \n{auth_model.Password}");
+            _logger.LogInformation($"Post запрос /api/Auth/register \n{auth_model}");
 
             return result switch
             {
@@ -32,7 +32,21 @@ namespace API.Controllers
                 "400" => StatusCode(400, "400"),
                 _ => StatusCode(500, "500")    
             };
-            
+        }
+
+        [HttpPost("authorization")]
+        public async Task<ActionResult> Authorization([FromBody] Auth_Model auth_model)
+        {
+            var result = await _authRepository.Authetification(auth_model);
+            _logger.LogInformation($"Get запрос /api/Auth/authorization \n{auth_model}");
+
+            return result switch
+            {
+                "200" => Ok("200"),
+                "404" => StatusCode(404, "404"),
+                "401" => StatusCode(401, "401"),
+                _ => StatusCode(500, "500")
+            };
         }
     }
 }

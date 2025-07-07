@@ -23,9 +23,25 @@ namespace WindowsForms
             _auth_Model = new Auth_Model();
         }
 
-        private void Auth_button_Click(object sender, EventArgs e)
+        private async void Auth_button_Click(object sender, EventArgs e)
         {
+            _auth_Model.Login = LogLog_textBox.Text;
+            _auth_Model.Password = LogPas_textBox.Text;
 
+            string result = await _auth_Repository.Authorization(_auth_Model);
+
+            if (result == "200")
+            {
+                MessageBox.Show("Успешная регистрация");
+            }
+            else if (result == "401")
+            {
+                MessageBox.Show("Пароль неверный");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка регистрации. Код: " + result);
+            }
         }
 
         private async void Reg_button_Click(object sender, EventArgs e)

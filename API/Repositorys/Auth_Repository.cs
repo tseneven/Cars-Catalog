@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
 using Classes;
+using System.Data;
 
 namespace API.Reposirotys
 {
@@ -39,9 +40,35 @@ namespace API.Reposirotys
                 return rows > 0 ? "200" : "500";
             }
         }
-        public void Authetification(string username, string password)
+        public async Task<string> Authetification(Auth_Model auth_Model)
         {
+            using (SqlConnection conn = new SqlConnection(connect))
+            {
+                await conn.OpenAsync();
 
+                string query = $"SELECT * FROM dbo.Users WHERE Логин = '{auth_Model.Login}'";
+
+                using var queryCmd = new SqlDataAdapter(query, conn);
+
+
+                DataTable db = new DataTable();
+
+                queryCmd.Fill(db);
+
+                if (db.Rows.Count == 0)
+                {
+                    return "404";
+                }
+
+                else
+                {
+                    if (auth_Model.Password.ToString() != db.Rows[0]["Пароль"].ToString().Trim())
+                    {
+                        return $"401";
+                    }
+                    return "200";
+                }
+            }
         }
         public void Delete(string username, string password)
         {
