@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Classes
+﻿namespace Classes
 {
     public class Car_Model
     {
@@ -14,8 +8,7 @@ namespace Classes
         public string Years { get; set; }
         public string Mileage { get; set; }
         public string Technical_Сondition { get; set; }
-        public byte[] image { get; set; }
-        public string Price { get; set; }
-
+        public byte[]? image { get; set; }
+        public string? Price { get; set; }
     }
 }

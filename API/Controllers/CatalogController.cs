@@ -1,7 +1,7 @@
-﻿using API.Repositorys.Catalog;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Classes;
+using API.Repositorys.Catalog;
 
 namespace API.Controllers
 {
@@ -9,10 +9,10 @@ namespace API.Controllers
     [ApiController]
     public class CatalogController : ControllerBase
     {
-        private readonly ICatalog_Repositorycs _catalog_Repository;
+        private readonly ICatalog_Repository _catalog_Repository;
         private readonly ILogger<CatalogController> _logger;
 
-        public CatalogController(ICatalog_Repositorycs catalog_repository, ILogger<CatalogController> logger)
+        public CatalogController(ICatalog_Repository catalog_repository, ILogger<CatalogController> logger)
         {
             _catalog_Repository = catalog_repository;
             _logger = logger;

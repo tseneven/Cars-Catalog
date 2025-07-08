@@ -28,57 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            listBox1 = new ListBox();
+            listBox2 = new ListBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(404, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(384, 420);
-            this.listBox1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 194);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(529, 12);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(460, 484);
+            listBox1.TabIndex = 0;
             // 
             // listBox2
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(13, 236);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(374, 196);
-            this.listBox2.TabIndex = 2;
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(12, 292);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(501, 204);
+            listBox2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(501, 254);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // Catalog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
-            this.Name = "Catalog";
-            this.Text = "Catalogcs";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1001, 504);
+            Controls.Add(pictureBox1);
+            Controls.Add(listBox2);
+            Controls.Add(listBox1);
+            Name = "Catalog";
+            Text = "Catalog";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private ListBox listBox1;
+        private ListBox listBox2;
+        private PictureBox pictureBox1;
     }
 }
