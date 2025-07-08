@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsForms.Repositorys
+namespace WindowsForms.Repositorys.Auth
 {
     public class Auth_Reposirtory : IAuth_Repository
     {
@@ -21,7 +21,7 @@ namespace WindowsForms.Repositorys
                 string responseBody = await response.Content.ReadAsStringAsync();
                 return responseBody;
             }
-            else return (response.StatusCode).ToString();
+            else return response.StatusCode.ToString();
         }
 
         public async Task<string> Authorization(Auth_Model auth_Model)
@@ -33,7 +33,7 @@ namespace WindowsForms.Repositorys
                 string responseBody = await response.Content.ReadAsStringAsync();
                 return responseBody;
             }
-            else return (response.StatusCode).ToString();
+            else return response.StatusCode.ToString();
         }
     }
 }

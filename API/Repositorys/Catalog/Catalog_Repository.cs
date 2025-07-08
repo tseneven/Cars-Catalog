@@ -30,13 +30,13 @@ namespace API.Repositorys.Catalog
                         var car = new Car_Model
                         {
                             ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            Name = reader["Название"].ToString(),
+                            Name = reader["Название"].ToString().Trim(),
                             UserID = Convert.ToInt32(reader["UserID"]),
-                            Years = reader["Год выпуска"].ToString(),
-                            Mileage = reader["Пробег"].ToString(),
-                            Technical_Сondition = reader["Техническое состояние"].ToString(),
-                            image = (byte[])reader["image"],
-                            Price = reader["Цена"].ToString()
+                            Years = reader["Год выпуска"].ToString().Trim(),
+                            Mileage = reader["Пробег"].ToString().Trim(),
+                            Technical_Сondition = reader["Техническое состояние"].ToString().Trim(),
+                            image = reader["image"] != DBNull.Value ? (byte[])reader["image"] : null,
+                            Price = reader["Цена"].ToString().Trim()
                         };
                         cars.Add(car);
                     }

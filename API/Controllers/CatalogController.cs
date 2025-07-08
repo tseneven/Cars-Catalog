@@ -21,8 +21,16 @@ namespace API.Controllers
         [HttpGet("getallcars")]
         public async Task<ActionResult> GetAllCars()
         {
-            var result = await _catalog_Repository.GetAllCars();
-            return Ok(result);
+            try
+            {
+                _logger.LogInformation("GET запрос /api/Catalog/getallcars");
+                var result = await _catalog_Repository.GetAllCars();
+                return Ok(result);
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
 
     }

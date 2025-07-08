@@ -1,5 +1,5 @@
 using Classes;
-using WindowsForms.Repositorys;
+using WindowsForms.Repositorys.Auth;
 
 namespace WindowsForms
 {
@@ -22,17 +22,24 @@ namespace WindowsForms
 
             string result = await _auth_Repository.Authorization(_auth_Model);
 
-            if (result == "200")
+            if (result == "500")
             {
-                MessageBox.Show("Успешная авторизация");
+                MessageBox.Show("Ошибка на сервере");
             }
             else if (result == "401")
             {
                 MessageBox.Show("Пароль неверный");
             }
+            else if(result == "404")
+            {
+                MessageBox.Show("Аккаунт не найден");
+            }
             else
             {
-                MessageBox.Show("Ошибка регистрации. Код: " + result);
+                MessageBox.Show("Успешная авторизация");
+                Catalog catalog = new Catalog(int.Parse(result));
+                catalog.Show();
+                this.Hide();
             }
         }
 

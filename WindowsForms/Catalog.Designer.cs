@@ -41,6 +41,7 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(460, 484);
             listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
@@ -68,6 +69,7 @@
             Controls.Add(listBox1);
             Name = "Catalog";
             Text = "Catalog";
+            Load += Catalog_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

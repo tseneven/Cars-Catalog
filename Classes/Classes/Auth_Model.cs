@@ -8,7 +8,7 @@ namespace Classes
 {
     public class Auth_Model
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
     }

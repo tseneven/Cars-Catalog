@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Classes;
 
-namespace WindowsForms.Repositorys
+namespace WindowsForms.Repositorys.Auth
 {
     public interface IAuth_Repository
     {

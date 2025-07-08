@@ -40,10 +40,10 @@ namespace API.Controllers
 
             return result switch
             {
-                "200" => Ok("200"),
+                "500" => StatusCode(500, "500"),
                 "404" => StatusCode(404, "404"),
                 "401" => StatusCode(401, "401"),
-                _ => StatusCode(500, "500")
+                _ => Ok($"{result}")
             };
         }
     }
