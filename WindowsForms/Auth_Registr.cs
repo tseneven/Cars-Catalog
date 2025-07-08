@@ -32,7 +32,7 @@ namespace WindowsForms
 
             if (result == "200")
             {
-                MessageBox.Show("Успешная регистрация");
+                MessageBox.Show("Успешная авторизация");
             }
             else if (result == "401")
             {

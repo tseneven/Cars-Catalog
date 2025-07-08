@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 using Classes;
 using System.Data;
 
-namespace API.Reposirotys
+namespace API.Repositorys.Auth
 {
     public class Auth_Repository : IAuth_Repository
     {
@@ -24,7 +24,7 @@ namespace API.Reposirotys
                 using var checkCmd = new SqlCommand(checkQuery, conn);
                 checkCmd.Parameters.AddWithValue("@login", auth_model.Login);
 
-                int count = (int)(await checkCmd.ExecuteScalarAsync());
+                int count = (int)await checkCmd.ExecuteScalarAsync();
 
                 if (count > 0)
                     return "400"; // пользователь уже есть

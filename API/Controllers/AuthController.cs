@@ -1,9 +1,9 @@
 ﻿using Classes;
-using API.Reposirotys;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
+using API.Repositorys.Auth;
 
 namespace API.Controllers
 {
@@ -24,7 +24,7 @@ namespace API.Controllers
         public async Task<ActionResult> Register([FromBody] Auth_Model auth_model)
         {
             var result = await _authRepository.Register(auth_model);
-            _logger.LogInformation($"Post запрос /api/Auth/register \n{auth_model}");
+            _logger.LogInformation($"Post запрос /api/Auth/register \n{result} \n{auth_model.Login} \n{auth_model.Password}");
 
             return result switch
             {
@@ -38,7 +38,7 @@ namespace API.Controllers
         public async Task<ActionResult> Authorization([FromBody] Auth_Model auth_model)
         {
             var result = await _authRepository.Authetification(auth_model);
-            _logger.LogInformation($"Get запрос /api/Auth/authorization \n{auth_model}");
+            _logger.LogInformation($"Post запрос /api/Auth/authorization \n{result} \n{auth_model.Login} \n{auth_model.Password}");
 
             return result switch
             {

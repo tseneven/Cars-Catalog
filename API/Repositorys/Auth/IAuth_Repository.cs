@@ -1,6 +1,6 @@
 ﻿using Classes;
 
-namespace API.Reposirotys
+namespace API.Repositorys.Auth
 {
     public interface IAuth_Repository
     {
