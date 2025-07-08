@@ -1,22 +1,14 @@
-п»їusing Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Classes;
 using WindowsForms.Repositorys;
 
 namespace WindowsForms
 {
-    public partial class Auth_Registr : Form
+    public partial class Auth_Register : Form
     {
         private readonly IAuth_Repository _auth_Repository;
         private readonly Auth_Model _auth_Model;
-        public Auth_Registr()
+
+        public Auth_Register()
         {
             InitializeComponent();
             _auth_Repository = new Auth_Reposirtory();
@@ -32,15 +24,15 @@ namespace WindowsForms
 
             if (result == "200")
             {
-                MessageBox.Show("РЈСЃРїРµС€РЅР°СЏ Р°РІС‚РѕСЂРёР·Р°С†РёСЏ");
+                MessageBox.Show("Успешная авторизация");
             }
             else if (result == "401")
             {
-                MessageBox.Show("РџР°СЂРѕР»СЊ РЅРµРІРµСЂРЅС‹Р№");
+                MessageBox.Show("Пароль неверный");
             }
             else
             {
-                MessageBox.Show("РћС€РёР±РєР° СЂРµРіРёСЃС‚СЂР°С†РёРё. РљРѕРґ: " + result);
+                MessageBox.Show("Ошибка регистрации. Код: " + result);
             }
         }
 
@@ -56,21 +48,22 @@ namespace WindowsForms
 
                 if (result == "200")
                 {
-                    MessageBox.Show("РЈСЃРїРµС€РЅР°СЏ СЂРµРіРёСЃС‚СЂР°С†РёСЏ");
+                    MessageBox.Show("Успешная регистрация");
                 }
                 else if (result == "400")
                 {
-                    MessageBox.Show("РўР°РєРѕР№ Р»РѕРіРёРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
+                    MessageBox.Show("Такой логин уже существует");
                 }
                 else
                 {
-                    MessageBox.Show("РћС€РёР±РєР° СЂРµРіРёСЃС‚СЂР°С†РёРё. РљРѕРґ: " + result);
+                    MessageBox.Show("Ошибка регистрации. Код: " + result);
                 }
             }
             else
             {
-                MessageBox.Show("РџР°СЂРѕР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚");
+                MessageBox.Show("Пароли не совпадают");
             }
         }
+
     }
 }

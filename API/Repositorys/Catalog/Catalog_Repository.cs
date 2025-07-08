@@ -4,11 +4,11 @@ using System.Data;
 
 namespace API.Repositorys.Catalog
 {
-    public class Catalog_Repositorycs : ICatalog_Repositorycs
+    public class Catalog_Repository : ICatalog_Repository
     {
         string connect;
 
-        public Catalog_Repositorycs(IConfiguration configuration)
+        public Catalog_Repository(IConfiguration configuration)
         {
             connect = configuration.GetConnectionString("DefaultConnection");
         }

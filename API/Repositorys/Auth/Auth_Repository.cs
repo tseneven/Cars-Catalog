@@ -1,6 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Classes;
 using Microsoft.Data.SqlClient;
-using Classes;
 using System.Data;
 
 namespace API.Repositorys.Auth
@@ -9,7 +8,7 @@ namespace API.Repositorys.Auth
     {
         string connect;
 
-        public Auth_Repository(IConfiguration configuration) 
+        public Auth_Repository(IConfiguration configuration)
         {
             connect = configuration.GetConnectionString("DefaultConnection");
         }
@@ -33,7 +32,7 @@ namespace API.Repositorys.Auth
                 string insertQuery = "INSERT INTO dbo.Users (Логин, Пароль) VALUES (@login, @password)";
                 using var insertCmd = new SqlCommand(insertQuery, conn);
                 insertCmd.Parameters.AddWithValue("@login", auth_model.Login);
-                insertCmd.Parameters.AddWithValue("@password", auth_model.Password); 
+                insertCmd.Parameters.AddWithValue("@password", auth_model.Password);
 
                 int rows = await insertCmd.ExecuteNonQueryAsync();
 

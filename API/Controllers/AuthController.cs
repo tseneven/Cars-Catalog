@@ -1,8 +1,6 @@
-﻿using Classes;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
-using System.Text.Json;
+using Classes;
 using API.Repositorys.Auth;
 
 namespace API.Controllers
@@ -30,7 +28,7 @@ namespace API.Controllers
             {
                 "200" => Ok("200"),
                 "400" => StatusCode(400, "400"),
-                _ => StatusCode(500, "500")    
+                _ => StatusCode(500, "500")
             };
         }
 
