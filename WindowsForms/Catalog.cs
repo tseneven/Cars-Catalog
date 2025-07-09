@@ -34,6 +34,8 @@ namespace WindowsForms
             listBox2.Items.Add($"Пробег: {selectedCar.Mileage}");
             listBox2.Items.Add($"Состояние: {selectedCar.Technical_Сondition}");
             listBox2.Items.Add($"Цена: {selectedCar.Price}");
+
+            AboutCar_Button.Visible = true;
         }
 
         private async void Catalog_Load(object sender, EventArgs e)
@@ -44,6 +46,28 @@ namespace WindowsForms
             {
                 listBox1.Items.Add(car_Model[i].Name);
             }
+        }
+
+        private void Exit_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AboutCar_Button_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Profile_Button_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile(UserID);
+            profile.Show();
+        }
+
+        private void Profile_Button_Click_1(object sender, EventArgs e)
+        {
+            Profile profile = new Profile(UserID);
+            profile.Show();
+
         }
     }
 }

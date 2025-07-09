@@ -69,9 +69,5 @@ namespace API.Repositorys.Auth
                 }
             }
         }
-        public void Delete(string username, string password)
-        {
-
-        }
     }
 }

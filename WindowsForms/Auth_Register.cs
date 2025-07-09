@@ -39,7 +39,7 @@ namespace WindowsForms
                 MessageBox.Show("Успешная авторизация");
                 Catalog catalog = new Catalog(int.Parse(result));
                 catalog.Show();
-                this.Hide();
+                this.Hide();    
             }
         }
 

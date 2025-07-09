@@ -6,6 +6,6 @@ namespace API.Repositorys.Auth
     {
         Task<string> Register(Auth_Model auth_model);
         Task<string> Authetification(Auth_Model auth_model);
-        void Delete(string username, string password);
+
     }
 }
