@@ -47,7 +47,7 @@ namespace API.Repositorys.User
             {
                 await conn.OpenAsync();
 
-                string query = $"UPDATE dbo.Users SET Имя = {user_model.Name}, Телефон = {user_model.telephone}";
+                string query = $"UPDATE dbo.Users SET Имя = '{user_model.Name}', Телефон = '{user_model.telephone}' WHERE ID = {user_model.Id}";
 
                 SqlCommand sqlCommand = new SqlCommand(query, conn);
 

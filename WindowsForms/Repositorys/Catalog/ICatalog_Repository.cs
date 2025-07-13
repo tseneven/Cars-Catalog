@@ -10,5 +10,6 @@ namespace WindowsForms.Repositorys.Catalog
     public interface ICatalog_Repository
     {
         Task<List<Car_Model>> GetAllCars();
+        Task<List<Car_Model>> GetUserCars(int id);
     }
 }

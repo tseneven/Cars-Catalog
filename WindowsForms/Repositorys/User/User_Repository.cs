@@ -22,10 +22,16 @@ namespace WindowsForms.Repositorys.User
             return await _HttpClient.GetFromJsonAsync<User_Model>($"http://localhost:8000/api/User/getuser?id={id}") ?? new User_Model();
         }
 
-        public Task<string> Edit(int id, User_Model user_model)
+        public async Task<string> Edit(User_Model user_model)
         {
-            return null;
-        }
+            var response = await _HttpClient.PatchAsJsonAsync("http://localhost:8000/api/User/edit", user_model);
 
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
+            }
+            else return response.StatusCode.ToString();
+        }
     }
 }

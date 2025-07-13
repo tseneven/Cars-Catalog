@@ -13,7 +13,7 @@ namespace WindowsForms.Repositorys.User
 
         Task<User_Model> GetUser(int id);
 
-        Task<string> Edit(int id, User_Model user_model);
+        Task<string> Edit(User_Model user_model);
 
     }
 }

@@ -33,5 +33,20 @@ namespace API.Controllers
             }
         }
 
+        [HttpGet("getusercars")]
+        public async Task<ActionResult> GetUserCars(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GET запрос /api/Catalog/getuserscar");
+                var result = await _catalog_Repository.GetUserCars(id);
+                return Ok(result);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
     }
 }
