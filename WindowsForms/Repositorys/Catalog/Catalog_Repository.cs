@@ -22,5 +22,18 @@ namespace WindowsForms.Repositorys.Catalog
         {
             return await _HttpClient.GetFromJsonAsync<List<Car_Model>>($"http://localhost:8000/api/Catalog/getusercars?id={id}") ?? new List<Car_Model>();
         }
+
+        public async Task<string> AddCar(Car_Model car_Model)
+        {
+            var response = await _HttpClient.PostAsJsonAsync($"http://localhost:8000/api/Catalog/addcar", car_Model);
+
+            if (response.IsSuccessStatusCode)
+            {
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
+            }
+            else return response.StatusCode.ToString();
+        }
     }
 }

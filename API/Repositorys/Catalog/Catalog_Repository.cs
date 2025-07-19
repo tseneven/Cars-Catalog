@@ -45,9 +45,33 @@ namespace API.Repositorys.Catalog
             return cars;
         }
 
-        public Task<string> AddCar(Car_Model car_Model)
+        public async Task<string> AddCar(Car_Model car_Model)
         {
-            return null;
+            using (SqlConnection conn = new SqlConnection(connect)) 
+            {
+                await conn.OpenAsync();
+
+                using (SqlCommand command = new SqlCommand(
+                    @"INSERT INTO dbo.Cars 
+    (UserID, Название, [Год выпуска], Пробег, [Техническое состояние], image, Цена) 
+    VALUES (@UserID, @Name, @Year, @Mileage, @Condition, @Image, @Price)", conn))
+                {
+                    command.Parameters.AddWithValue("@UserID", car_Model.UserID);
+                    command.Parameters.AddWithValue("@Name", car_Model.Name);
+                    command.Parameters.AddWithValue("@Year", car_Model.Years);
+                    command.Parameters.AddWithValue("@Mileage", car_Model.Mileage);
+                    command.Parameters.AddWithValue("@Condition", car_Model.Technical_Сondition);
+
+                    // image должен быть byte[]
+                    command.Parameters.AddWithValue("@Image", car_Model.image);
+
+                    command.Parameters.AddWithValue("@Price", car_Model.Price);
+
+                    int rows = await command.ExecuteNonQueryAsync();
+                    return rows > 0 ? "200" : "500";
+
+                }
+            }
         }
         public Task<string> DeleteCar(int id)
         {
@@ -62,7 +86,7 @@ namespace API.Repositorys.Catalog
         {
             var cars = new List<Car_Model>();
 
-            using (SqlConnection conn = new SqlConnection(connect))
+            using (SqlConnection conn = new SqlConnection(connect)) 
             {
                 await conn.OpenAsync();
                 string query = $"SELECT * FROM dbo.Cars WHERE UserID = {id}";

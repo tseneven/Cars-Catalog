@@ -39,6 +39,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            Profile_Delete_Button = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -132,6 +133,7 @@
             button2.TabIndex = 9;
             button2.Text = "Добавить авто";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -142,11 +144,21 @@
             button3.Text = "Удалить авто";
             button3.UseVisualStyleBackColor = true;
             // 
+            // Profile_Delete_Button
+            // 
+            Profile_Delete_Button.Location = new Point(21, 280);
+            Profile_Delete_Button.Name = "Profile_Delete_Button";
+            Profile_Delete_Button.Size = new Size(282, 56);
+            Profile_Delete_Button.TabIndex = 11;
+            Profile_Delete_Button.Text = "Удалить";
+            Profile_Delete_Button.UseVisualStyleBackColor = true;
+            // 
             // Profile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(968, 487);
+            Controls.Add(Profile_Delete_Button);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -178,5 +190,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button Profile_Delete_Button;
     }
 }

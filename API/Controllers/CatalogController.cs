@@ -42,11 +42,25 @@ namespace API.Controllers
                 var result = await _catalog_Repository.GetUserCars(id);
                 return Ok(result);
             }
-            catch
+            catch (Exception e)
             {
                 return BadRequest();
             }
         }
 
+        [HttpPost("addcar")]
+        public async Task<ActionResult> AddCar(Car_Model car_Model)
+        {
+            try
+            {
+                _logger.LogInformation("POST запрос /api/Catalog/addcar");
+                var result = await _catalog_Repository.AddCar(car_Model);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

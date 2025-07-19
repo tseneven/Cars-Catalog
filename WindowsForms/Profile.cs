@@ -86,5 +86,11 @@ namespace WindowsForms
                 Profile_Edit_Button.Text = "Сохранить";
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddCar addCar = new AddCar(UserId);
+            addCar.Show();
+        }
     }
 }
