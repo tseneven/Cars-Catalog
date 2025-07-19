@@ -57,5 +57,30 @@ namespace API.Repositorys.User
             }
         }
 
+        public async Task<string> Delete(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(connect))
+            {
+                await conn.OpenAsync();
+                string query = $"DELETE FROM dbo.Cars WHERE UserID = @userid";
+
+                SqlCommand sqlCommand = new SqlCommand(query, conn);
+
+                sqlCommand.Parameters.AddWithValue("@userid", id);
+
+                int rows = await sqlCommand.ExecuteNonQueryAsync();
+
+                query = $"DELETE FROM dbo.Users WHERE ID = @userid";
+
+                sqlCommand = new SqlCommand(query, conn);
+
+                sqlCommand.Parameters.AddWithValue("@userid", id);
+
+                await sqlCommand.ExecuteNonQueryAsync();
+
+                return rows > 0 ? "200" : "500";
+            }
+        }
+
     }
 }

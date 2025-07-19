@@ -22,11 +22,11 @@ namespace WindowsForms
 
             string result = await _auth_Repository.Authorization(_auth_Model);
 
-            if (result == "401")
+            if (result == "Unauthorized")
             {
                 MessageBox.Show("Пароль неверный");
             }
-            else if (result == "404")
+            else if (result == "NotFound")
             {
                 MessageBox.Show("Аккаунт не найден");
             }

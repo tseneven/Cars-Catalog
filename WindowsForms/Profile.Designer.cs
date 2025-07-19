@@ -162,6 +162,7 @@
             Profile_Delete_Button.TabIndex = 11;
             Profile_Delete_Button.Text = "Удалить";
             Profile_Delete_Button.UseVisualStyleBackColor = true;
+            Profile_Delete_Button.Click += Profile_Delete_Button_Click;
             // 
             // Profile
             // 

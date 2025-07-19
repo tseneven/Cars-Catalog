@@ -31,5 +31,20 @@ namespace WindowsForms.Repositorys.User
                 return "500";
             }
         }
+
+        public async Task<string> Delete(int id)
+        {
+            try
+            {
+                var response = await _HttpClient.DeleteAsync($"http://localhost:8000/api/User/delete?id={id}");
+
+                return ((int)response.StatusCode).ToString();
+
+            }
+            catch
+            {
+                return "500";
+            }
+        }
     }
 }

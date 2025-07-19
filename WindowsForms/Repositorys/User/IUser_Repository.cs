@@ -15,5 +15,7 @@ namespace WindowsForms.Repositorys.User
 
         Task<string> Edit(User_Model user_model);
 
+        Task<string> Delete(int id);
+
     }
 }

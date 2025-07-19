@@ -128,5 +128,15 @@ namespace WindowsForms
             }
 
         }
+
+        private void Profile_Delete_Button_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Удалить аккаунт?", "Удаление аккаунта", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                _user_Repository.Delete(UserId);
+            }
+        }
     }
 }

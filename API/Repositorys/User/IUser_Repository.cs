@@ -10,5 +10,7 @@ namespace API.Repositorys.User
 
         Task<string> Edit(int id, User_Model user_model);
 
+        Task<string> Delete(int id);
+
     }
 }

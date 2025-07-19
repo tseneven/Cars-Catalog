@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using API.Repositorys.Catalog;
 using Classes;
-using API.Repositorys.Catalog;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.Controllers
@@ -28,9 +29,9 @@ namespace API.Controllers
                 var result = await _catalog_Repository.GetAllCars();
                 return Ok(result);
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -43,9 +44,9 @@ namespace API.Controllers
                 var result = await _catalog_Repository.GetUserCars(id);
                 return Ok(result);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -59,9 +60,9 @@ namespace API.Controllers
                 _logger.LogInformation(result);
                 return Ok(result);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -74,9 +75,9 @@ namespace API.Controllers
                 var result = await _catalog_Repository.DeleteCar(id);
                 return Ok(result);
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -89,9 +90,9 @@ namespace API.Controllers
                 var result = await _catalog_Repository.EditCar(car_Model);
                 return Ok();
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
     }

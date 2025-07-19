@@ -32,6 +32,7 @@ namespace API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [HttpPatch("edit")]
         public async Task<ActionResult> Edit(User_Model user_Model)
         {
@@ -42,6 +43,22 @@ namespace API.Controllers
                 return Ok(result);
             }
             catch (Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("delete")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            _logger.LogInformation($"DELETE запрос api/User/delete");
+
+            try
+            {
+                var result = await _user_Repository.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
