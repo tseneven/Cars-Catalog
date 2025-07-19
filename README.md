@@ -56,7 +56,10 @@ cd Cars-Catalog
 
 Открыть WindowsForms проект, запустить с UI.
 
-Возможна реализация запуск через exe
+# Релиз
+
+## [v 1.0.0](https://github.com/tseneven/Cars-Catalog/releases/tag/MVP)
+
 
 Автор: [tseneven](https://github.com/tseneven)
 
