@@ -53,8 +53,8 @@ namespace API.Repositorys.Catalog
 
                 using (SqlCommand command = new SqlCommand(
                     @"INSERT INTO dbo.Cars 
-    (UserID, Название, [Год выпуска], Пробег, [Техническое состояние], image, Цена) 
-    VALUES (@UserID, @Name, @Year, @Mileage, @Condition, @Image, @Price)", conn))
+    (UserID, Название, [Год выпуска], Пробег, [Техническое состояние], Цена) 
+    VALUES (@UserID, @Name, @Year, @Mileage, @Condition, @Price)", conn))
                 {
                     command.Parameters.AddWithValue("@UserID", car_Model.UserID);
                     command.Parameters.AddWithValue("@Name", car_Model.Name);
@@ -63,7 +63,6 @@ namespace API.Repositorys.Catalog
                     command.Parameters.AddWithValue("@Condition", car_Model.Technical_Сondition);
 
                     // image должен быть byte[]
-                    command.Parameters.AddWithValue("@Image", car_Model.image);
 
                     command.Parameters.AddWithValue("@Price", car_Model.Price);
 

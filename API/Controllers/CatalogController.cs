@@ -55,6 +55,7 @@ namespace API.Controllers
             {
                 _logger.LogInformation("POST запрос /api/Catalog/addcar");
                 var result = await _catalog_Repository.AddCar(car_Model);
+                _logger.LogInformation(result);
                 return Ok(result);
             }
             catch (Exception e)

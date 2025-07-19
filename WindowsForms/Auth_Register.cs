@@ -26,11 +26,11 @@ namespace WindowsForms
             {
                 MessageBox.Show("Ошибка на сервере");
             }
-            else if (result == "401")
+            else if (result == "Unauthorized")
             {
                 MessageBox.Show("Пароль неверный");
             }
-            else if(result == "404")
+            else if(result == "NotFound")
             {
                 MessageBox.Show("Аккаунт не найден");
             }
