@@ -37,5 +37,31 @@ namespace WindowsForms.Repositorys.Catalog
                 return "500";
             }
         }
+
+        public async Task<string> DeleteCar(int id)
+        {
+            try
+            {
+                var response = await _HttpClient.DeleteAsync($"http://localhost:8000/api/Catalog/deletecar?id={id}");
+                return ((int)response.StatusCode).ToString();
+            }
+            catch
+            {
+                return "500";
+            }
+        }
+
+        public async Task<string> EditCar(Car_Model car_Model)
+        {
+            try
+            {
+                var response = await _HttpClient.PatchAsJsonAsync($"http://localhost:8000/api/Catalog/editcar", car_Model);
+                return ((int)response.StatusCode).ToString();
+            }
+            catch 
+            {
+                return "500";
+            }
+        }
     }
 }

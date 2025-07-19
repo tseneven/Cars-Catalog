@@ -10,6 +10,8 @@ namespace WindowsForms
         string name;
         string telephone;
         bool isEdit = false;
+        List<Car_Model> cars;
+
 
 
         IUser_Repository _user_Repository = new User_Repository();
@@ -39,7 +41,9 @@ namespace WindowsForms
 
         private async Task GetUserCars(int id)
         {
-            List<Car_Model> cars = await _catalog_Repository.GetUserCars(id);
+            cars = await _catalog_Repository.GetUserCars(id);
+
+            listBox1.Items.Clear();
 
             for (int i = 0; i < cars.Count; i++)
             {
@@ -91,6 +95,38 @@ namespace WindowsForms
         {
             AddCar addCar = new AddCar(UserId);
             addCar.Show();
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            int SelectedIndexAuto = listBox1.SelectedIndex;
+
+            if (SelectedIndexAuto == -1)
+            {
+                MessageBox.Show("Автомобиль не выбран");
+            }
+            else
+            {
+                await _catalog_Repository.DeleteCar(cars[SelectedIndexAuto].ID);
+                await GetUserCars(UserId);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int SelectedIndexAuto = listBox1.SelectedIndex;
+
+            if (SelectedIndexAuto == -1)
+            {
+                MessageBox.Show("Автомобиль не выбран");
+            }
+            else
+            {
+                AddCar addCar = new AddCar(UserId, cars[SelectedIndexAuto]);
+                addCar.Show();
+
+            }
+
         }
     }
 }

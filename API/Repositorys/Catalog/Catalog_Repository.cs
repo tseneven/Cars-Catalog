@@ -67,7 +67,7 @@ namespace API.Repositorys.Catalog
                     command.Parameters.AddWithValue("@Price", car_Model.Price);
 
                     int rows = await command.ExecuteNonQueryAsync();
-                    return rows > 0 ? "200" : "500";
+                    return rows > 0 ? "200" : "400";
 
                 }
             }
@@ -83,7 +83,7 @@ namespace API.Repositorys.Catalog
                     command.Parameters.AddWithValue("@id", id);
 
                     int rows = await command.ExecuteNonQueryAsync();
-                    return rows > 0 ? "200" : "500";
+                    return rows > 0 ? "200" : "400";
                 }
             }
         }
@@ -103,7 +103,7 @@ namespace API.Repositorys.Catalog
                     command.Parameters.AddWithValue("@Id", car_Model.ID);
 
                     int rows = await command.ExecuteNonQueryAsync();
-                    return rows > 0 ? "200" : "500";
+                    return rows > 0 ? "200" : "400";
                 }
             }
 
