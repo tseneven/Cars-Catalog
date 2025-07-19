@@ -136,6 +136,9 @@ namespace WindowsForms
             if (result == DialogResult.Yes)
             {
                 _user_Repository.Delete(UserId);
+                this.Hide();
+                Auth_Register auth = new Auth_Register();
+                auth.Show();
             }
         }
     }
