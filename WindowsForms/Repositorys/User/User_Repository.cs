@@ -1,10 +1,5 @@
 ﻿using Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsForms.Repositorys.User
 {
@@ -24,14 +19,17 @@ namespace WindowsForms.Repositorys.User
 
         public async Task<string> Edit(User_Model user_model)
         {
-            var response = await _HttpClient.PatchAsJsonAsync("http://localhost:8000/api/User/edit", user_model);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                string responseBody = await response.Content.ReadAsStringAsync();
-                return responseBody;
+                var response = await _HttpClient.PatchAsJsonAsync("http://localhost:8000/api/User/edit", user_model);
+
+                return ((int)response.StatusCode).ToString();
+
             }
-            else return response.StatusCode.ToString();
+            catch
+            {
+                return "500";
+            }
         }
     }
 }

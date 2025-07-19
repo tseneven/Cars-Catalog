@@ -26,9 +26,9 @@ namespace API.Controllers
 
             return result switch
             {
-                "200" => Ok("200"),
-                "400" => StatusCode(400, "400"),
-                _ => StatusCode(500, "500")
+                "200" => Ok(),
+                "409" => StatusCode(409),
+                _ => StatusCode(400)
             };
         }
 
@@ -40,9 +40,8 @@ namespace API.Controllers
 
             return result switch
             {
-                "500" => StatusCode(500, "500"),
-                "404" => StatusCode(404, "404"),
-                "401" => StatusCode(401, "401"),
+                "404" => StatusCode(404),
+                "401" => StatusCode(401),
                 _ => Ok($"{result}")
             };
         }

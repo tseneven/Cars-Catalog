@@ -30,14 +30,14 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            Log_textBox = new TextBox();
-            Pas_textBox = new TextBox();
-            PovPas_textBox = new TextBox();
             Reg_button = new Button();
+            PovPas_textBox = new TextBox();
+            Pas_textBox = new TextBox();
+            Log_textBox = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            tabPage2 = new TabPage();
             Auth_button = new Button();
             LogPas_textBox = new TextBox();
             LogLog_textBox = new TextBox();
@@ -52,10 +52,11 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 12);
+            tabControl1.Location = new Point(10, 9);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(453, 426);
+            tabControl1.Size = new Size(396, 320);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -67,13 +68,79 @@
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(445, 393);
+            tabPage1.Padding = new Padding(3, 2, 3, 2);
+            tabPage1.Size = new Size(388, 292);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Регистрация";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
+            // 
+            // Reg_button
+            // 
+            Reg_button.Location = new Point(131, 142);
+            Reg_button.Margin = new Padding(3, 2, 3, 2);
+            Reg_button.Name = "Reg_button";
+            Reg_button.Size = new Size(235, 36);
+            Reg_button.TabIndex = 6;
+            Reg_button.Text = "Регистрация";
+            Reg_button.UseVisualStyleBackColor = true;
+            Reg_button.Click += Reg_button_Click;
+            // 
+            // PovPas_textBox
+            // 
+            PovPas_textBox.Location = new Point(132, 94);
+            PovPas_textBox.Margin = new Padding(3, 2, 3, 2);
+            PovPas_textBox.Name = "PovPas_textBox";
+            PovPas_textBox.Size = new Size(235, 23);
+            PovPas_textBox.TabIndex = 5;
+            PovPas_textBox.UseSystemPasswordChar = true;
+            // 
+            // Pas_textBox
+            // 
+            Pas_textBox.Location = new Point(132, 57);
+            Pas_textBox.Margin = new Padding(3, 2, 3, 2);
+            Pas_textBox.Name = "Pas_textBox";
+            Pas_textBox.Size = new Size(235, 23);
+            Pas_textBox.TabIndex = 4;
+            Pas_textBox.UseSystemPasswordChar = true;
+            // 
+            // Log_textBox
+            // 
+            Log_textBox.Location = new Point(132, 23);
+            Log_textBox.Margin = new Padding(3, 2, 3, 2);
+            Log_textBox.Name = "Log_textBox";
+            Log_textBox.Size = new Size(235, 23);
+            Log_textBox.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(5, 94);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Повторите пароль";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(5, 57);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Пароль";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(5, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(41, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Логин";
             // 
             // tabPage2
             // 
@@ -82,123 +149,68 @@
             tabPage2.Controls.Add(LogLog_textBox);
             tabPage2.Controls.Add(label4);
             tabPage2.Controls.Add(label5);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(445, 393);
+            tabPage2.Padding = new Padding(3, 2, 3, 2);
+            tabPage2.Size = new Size(388, 292);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Авторизация";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(52, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Логин";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Пароль";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(6, 126);
-            label3.Name = "label3";
-            label3.Size = new Size(139, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Повторите пароль";
-            // 
-            // Log_textBox
-            // 
-            Log_textBox.Location = new Point(151, 31);
-            Log_textBox.Name = "Log_textBox";
-            Log_textBox.Size = new Size(268, 27);
-            Log_textBox.TabIndex = 3;
-            // 
-            // Pas_textBox
-            // 
-            Pas_textBox.Location = new Point(151, 76);
-            Pas_textBox.Name = "Pas_textBox";
-            Pas_textBox.Size = new Size(268, 27);
-            Pas_textBox.TabIndex = 4;
-            Pas_textBox.UseSystemPasswordChar = true;
-            // 
-            // PovPas_textBox
-            // 
-            PovPas_textBox.Location = new Point(151, 126);
-            PovPas_textBox.Name = "PovPas_textBox";
-            PovPas_textBox.Size = new Size(268, 27);
-            PovPas_textBox.TabIndex = 5;
-            PovPas_textBox.UseSystemPasswordChar = true;
-            // 
-            // Reg_button
-            // 
-            Reg_button.Location = new Point(150, 189);
-            Reg_button.Name = "Reg_button";
-            Reg_button.Size = new Size(269, 48);
-            Reg_button.TabIndex = 6;
-            Reg_button.Text = "Регистрация";
-            Reg_button.UseVisualStyleBackColor = true;
-            Reg_button.Click += this.Reg_button_Click;
-            // 
             // Auth_button
             // 
-            Auth_button.Location = new Point(154, 142);
+            Auth_button.Location = new Point(135, 106);
+            Auth_button.Margin = new Padding(3, 2, 3, 2);
             Auth_button.Name = "Auth_button";
-            Auth_button.Size = new Size(269, 48);
+            Auth_button.Size = new Size(235, 36);
             Auth_button.TabIndex = 11;
             Auth_button.Text = "Авторизация";
             Auth_button.UseVisualStyleBackColor = true;
-            Auth_button.Click += this.Auth_button_Click;
+            Auth_button.Click += Auth_button_Click;
             // 
             // LogPas_textBox
             // 
-            LogPas_textBox.Location = new Point(155, 79);
+            LogPas_textBox.Location = new Point(136, 59);
+            LogPas_textBox.Margin = new Padding(3, 2, 3, 2);
             LogPas_textBox.Name = "LogPas_textBox";
-            LogPas_textBox.Size = new Size(268, 27);
+            LogPas_textBox.Size = new Size(235, 23);
             LogPas_textBox.TabIndex = 10;
             LogPas_textBox.UseSystemPasswordChar = true;
             // 
             // LogLog_textBox
             // 
-            LogLog_textBox.Location = new Point(155, 29);
+            LogLog_textBox.Location = new Point(136, 22);
+            LogLog_textBox.Margin = new Padding(3, 2, 3, 2);
             LogLog_textBox.Name = "LogLog_textBox";
-            LogLog_textBox.Size = new Size(268, 27);
+            LogLog_textBox.Size = new Size(235, 23);
             LogLog_textBox.TabIndex = 9;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(10, 79);
+            label4.Location = new Point(9, 59);
             label4.Name = "label4";
-            label4.Size = new Size(62, 20);
+            label4.Size = new Size(49, 15);
             label4.TabIndex = 8;
             label4.Text = "Пароль";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(10, 29);
+            label5.Location = new Point(9, 22);
             label5.Name = "label5";
-            label5.Size = new Size(52, 20);
+            label5.Size = new Size(41, 15);
             label5.TabIndex = 7;
             label5.Text = "Логин";
             // 
             // Auth_Register
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 450);
+            ClientSize = new Size(410, 338);
             Controls.Add(tabControl1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Auth_Register";
             Text = "Form1";
             tabControl1.ResumeLayout(false);

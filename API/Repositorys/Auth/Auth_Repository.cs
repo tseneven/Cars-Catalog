@@ -26,7 +26,7 @@ namespace API.Repositorys.Auth
                 int count = (int)await checkCmd.ExecuteScalarAsync();
 
                 if (count > 0)
-                    return "400"; // пользователь уже есть
+                    return "409"; // пользователь уже есть
 
                 // Вставка нового пользователя
                 string insertQuery = "INSERT INTO dbo.Users (Логин, Пароль) VALUES (@login, @password)";
@@ -36,7 +36,7 @@ namespace API.Repositorys.Auth
 
                 int rows = await insertCmd.ExecuteNonQueryAsync();
 
-                return rows > 0 ? "200" : "500";
+                return rows > 0 ? "200" : "400";
             }
         }
         public async Task<string> Authetification(Auth_Model auth_Model)

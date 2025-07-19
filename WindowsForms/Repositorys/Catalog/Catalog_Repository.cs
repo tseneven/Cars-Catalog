@@ -25,15 +25,17 @@ namespace WindowsForms.Repositorys.Catalog
 
         public async Task<string> AddCar(Car_Model car_Model)
         {
-            var response = await _HttpClient.PostAsJsonAsync($"http://localhost:8000/api/Catalog/addcar", car_Model);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
+                var response = await _HttpClient.PostAsJsonAsync($"http://localhost:8000/api/Catalog/addcar", car_Model);
 
-                string responseBody = await response.Content.ReadAsStringAsync();
-                return responseBody;
+                return ((int)response.StatusCode).ToString();
+
             }
-            else return response.StatusCode.ToString();
+            catch
+            {
+                return "500";
+            }
         }
     }
 }

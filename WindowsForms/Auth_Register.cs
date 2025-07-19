@@ -22,15 +22,11 @@ namespace WindowsForms
 
             string result = await _auth_Repository.Authorization(_auth_Model);
 
-            if (result == "500")
-            {
-                MessageBox.Show("Ошибка на сервере");
-            }
-            else if (result == "Unauthorized")
+            if (result == "401")
             {
                 MessageBox.Show("Пароль неверный");
             }
-            else if(result == "NotFound")
+            else if (result == "404")
             {
                 MessageBox.Show("Аккаунт не найден");
             }
@@ -39,7 +35,7 @@ namespace WindowsForms
                 MessageBox.Show("Успешная авторизация");
                 Catalog catalog = new Catalog(int.Parse(result));
                 catalog.Show();
-                this.Hide();    
+                this.Hide();
             }
         }
 
@@ -57,7 +53,7 @@ namespace WindowsForms
                 {
                     MessageBox.Show("Успешная регистрация");
                 }
-                else if (result == "400")
+                else if (result == "409")
                 {
                     MessageBox.Show("Такой логин уже существует");
                 }
@@ -72,5 +68,9 @@ namespace WindowsForms
             }
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
