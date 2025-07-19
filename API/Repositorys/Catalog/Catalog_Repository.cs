@@ -62,7 +62,7 @@ namespace API.Repositorys.Catalog
                     command.Parameters.AddWithValue("@Mileage", car_Model.Mileage);
                     command.Parameters.AddWithValue("@Condition", car_Model.Technical_Сondition);
 
-                    // image должен быть byte[]
+                    // image должен быть byte[] либо null
 
                     command.Parameters.AddWithValue("@Price", car_Model.Price);
 
@@ -72,13 +72,41 @@ namespace API.Repositorys.Catalog
                 }
             }
         }
-        public Task<string> DeleteCar(int id)
+        public async Task<string> DeleteCar(int id)
         {
-            return null;
+            using (SqlConnection  conn = new SqlConnection(connect))
+            {
+                await conn.OpenAsync();
+
+                using (SqlCommand command = new SqlCommand($"DELETE FROM dbo.Cars WHERE id = @id", conn))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+
+                    int rows = await command.ExecuteNonQueryAsync();
+                    return rows > 0 ? "200" : "500";
+                }
+            }
         }
-        public Task<string> UpdateCar(Car_Model car_Model)
+        public async Task<string> EditCar(Car_Model car_Model)
         {
-            return null;
+            using (SqlConnection conn = new SqlConnection(connect)) 
+            {
+                await conn.OpenAsync();
+
+                using (SqlCommand command = new SqlCommand($"UPDATE dbo.Cars SET Название = @Name, [Год выпуска] = @Year, Пробег = @Mileage, [Техническое состояние] = @Сondition, Цена = @Price WHERE Id = @Id"))
+                {
+                    command.Parameters.AddWithValue("@Name", car_Model.Name);
+                    command.Parameters.AddWithValue("@Year", car_Model.Years);
+                    command.Parameters.AddWithValue("@Mileage", car_Model.Mileage);
+                    command.Parameters.AddWithValue("@Сondition", car_Model.Technical_Сondition);
+                    command.Parameters.AddWithValue("@Price", car_Model.Price);
+                    command.Parameters.AddWithValue("@Id", car_Model.ID);
+
+                    int rows = await command.ExecuteNonQueryAsync();
+                    return rows > 0 ? "200" : "500";
+                }
+            }
+
         }
 
         public async Task<List<Car_Model>> GetUserCars(int id)

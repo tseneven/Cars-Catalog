@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Classes;
 using API.Repositorys.Catalog;
+using System.ComponentModel.DataAnnotations;
 
 namespace API.Controllers
 {
@@ -59,6 +60,36 @@ namespace API.Controllers
                 return Ok(result);
             }
             catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("deletecar")]
+        public async Task<ActionResult> DeleteCarByID(int id)
+        {
+            try
+            {
+                _logger.LogInformation("DELETE запрос /api/Catalog/deletecar");
+                var result = await _catalog_Repository.DeleteCar(id);
+                return Ok(result);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpPatch("editcar")]
+        public async Task<ActionResult> EditCar(Car_Model car_Model)
+        {
+            try
+            {
+                _logger.LogInformation("PATCH запрос /api/Catalog/editcar");
+                var result = await _catalog_Repository.EditCar(car_Model);
+                return Ok();
+            }
+            catch
             {
                 return BadRequest();
             }
